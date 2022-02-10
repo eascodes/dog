@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-      <h1>Dog Backpacking</h1>
+      <img src="assets/dog_color.svg" alt="dog with backpack" id="myContainer">
+      <img src="assets/dog_tail.svg" alt="dog tail" id="myAnimation" class="fancyImage stop">
   </header>      
 </body>
 </html>
+
+<script>
+  let fancy = document.querySelector("#myContainer");
+  let tail = document.querySelector(".fancyImage");
+
+  fancy.addEventListener("mouseover", function(){
+    console.log("poop");
+    tail.classList.add("go");       
+    tail.classList.remove("stop");
+  });
+
+  fancy.addEventListener("mouseout", function(){
+    console.log("pee");
+    tail.classList.add("stop");
+    tail.classList.remove("go");   
+  });
+</script>

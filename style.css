@@ -1,0 +1,35 @@
+#myContainer {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+}
+
+.fancyImage {
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin-left: 260px;
+    margin-top: 260px;
+    z-index: 1;
+}
+
+.fancyImage.stop {
+    transform: none;
+}
+
+.fancyImage.go {
+    transform: rotate(30deg);
+    transform-origin: bottom;
+    transition: 300ms;
+    animation: shake .08s infinite alternate;
+    }
+
+@keyframes shake {
+    0% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(40deg);
+    }
+  }
